@@ -8,6 +8,19 @@ body {
   font-style: normal;
 }
 
+.icon--24 {
+  font-size: 24px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 30px;
+  border: 2px solid black;
+  position: absolute;
+  background: white;
+  left: -8px;
+}
+
 .ResumeContainer {
   display: flex;
   align-items: center;
@@ -27,15 +40,24 @@ body {
   flex: 1 0 auto;
 }
 
-.NameContainer {
+.Header {
+  display: flex;
   flex: 0 1 auto;
+  border-bottom: 1px solid black;
+}
+
+.Photo {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 50px;
 }
 
 .Side {
-  background: black;
-  color:  white;
   flex: 0 0 30%;
   padding: 0 10px;
+  background: #E4E4E4;
 }
 
 .flex {
@@ -44,9 +66,13 @@ body {
 }
 
 .EmailPhone {
-  font-size: 10px;
-  padding-top: 10px;
+  font-size: 11px;
+  padding-top: 20px;
   font-weight: normal;
+}
+
+.EmailPhone > * {
+  padding: 3px 0;
 }
 
 .Title {
@@ -64,14 +90,15 @@ body {
 
 .SubTitle {
   font-size: 18px;
-  width: 100%;
   padding: 0 10px 10px 10px;
-  border-bottom: 1px solid black;
 }
 
 .SideHeading {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
+  padding: 2px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
 }
 
 .uppercase {
@@ -80,28 +107,32 @@ body {
 
 .About {
   font-weight: normal;
-  padding: 3px 5px;
-  font-size: 9px;
+  padding: 20px;
+  font-size: 12px;
 }
 
 .Main {
-  padding: 10px;
-  flex: 1 0 auto;
+  padding: 20px 10px;
 }
 
 .Heading {
   font-family: "Roboto Slab";
   font-size: 14px;
-  line-height: 20px;
+  font-weight: bold;
+  line-height: 16px;
   color: black;
-  padding: 2px 0 3px 0;
-  border-bottom: 1px solid black;
+  padding: 3px 0;
+  background: #E4E4E4;
+  padding-left: 30px;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 10px;
 }
 
 .Timeline {
   margin: 10px 0 10px 20px;
   border-left: 2px  solid gray;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .TimelineItem {
@@ -112,7 +143,7 @@ body {
 .TimelineItem:before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 14px;
   left: -6px;
   height: 6px;
   width: 6px;
@@ -122,12 +153,15 @@ body {
 }
 
 .TimelineTitle {
+  font-size: 14px;
+}
+
+.bold {
   font-weight: bold;
-  font-size: 12px;
 }
 
 .Role {
-  font-size: 10px;
+  font-size: 12px;
   color: gray;
 }
 
@@ -137,9 +171,36 @@ body {
 }
 
 .Duration {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.LogoContainer img {
+  height: 30px;
+  width: auto;
+  margin: 3px;
 }
 
 .TechnicalSkill {
-  padding: 10px 0;
+  padding: 20px 0;
+}
+
+.Skill {
+  font-size: 11px;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+}
+
+.Skill *:first-child {
+  flex: 0 1 50%;
+}
+
+.Skill .icon {
+  font-size: 8px;
 }
