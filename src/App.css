@@ -1,3 +1,13 @@
+body {
+  font-family: Roboto;
+}
+
+.icon {
+  font-family: Material Icons;
+  margin-right: 5px;
+  font-style: normal;
+}
+
 .ResumeContainer {
   display: flex;
   align-items: center;
@@ -9,6 +19,16 @@
   height: 842px;
   border: 2px solid black;
   display: flex;
+  flex-direction: column;
+}
+
+.ResumeContent {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.NameContainer {
+  flex: 0 1 auto;
 }
 
 .Side {
@@ -17,31 +37,109 @@
   flex: 0 0 30%;
   padding: 0 10px;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.EmailPhone {
+  font-size: 10px;
+  padding-top: 10px;
+  font-weight: normal;
+}
+
 .Title {
   font-weight: bold;
   font-size: 20px;
-  padding: 3px 5px;
+  padding: 10px 5px 3px 5px;
+}
+
+.Name {
+  font-family: "Roboto Slab";
+  font-size: 35px;
+  font-weight: bold;
+  padding: 0 10px;
 }
 
 .SubTitle {
+  font-size: 18px;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  border-bottom: 1px solid black;
+}
+
+.SideHeading {
   font-size: 12px;
+  line-height: 18px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .About {
+  font-weight: normal;
   padding: 3px 5px;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .Main {
   padding: 10px;
+  flex: 1 0 auto;
 }
 
 .Heading {
-  text-align: center;
-  font-size: 12px;
+  font-family: "Roboto Slab";
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  padding: 2px 0 3px 0;
+  border-bottom: 1px solid black;
+}
+
+.Timeline {
+  margin: 10px 0 10px 20px;
+  border-left: 2px  solid gray;
+  font-size: 10px;
+}
+
+.TimelineItem {
+  padding: 10px;
+  position: relative;
+}
+
+.TimelineItem:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -6px;
+  height: 6px;
+  width: 6px;
+  border: 2px solid gray;
+  background: white;
+  border-radius: 6px;
+}
+
+.TimelineTitle {
   font-weight: bold;
-  background: black;
-  color: white;
-  border-radius: 10px;
-  padding: 2px 0;
+  font-size: 12px;
+}
+
+.Role {
+  font-size: 10px;
+  color: gray;
+}
+
+.Role::before {
+  content: " ";
+  white-space: pre;
+}
+
+.Duration {
+  font-size: 10px;
+}
+
+.TechnicalSkill {
+  padding: 10px 0;
 }
