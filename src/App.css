@@ -42,16 +42,19 @@ body {
 
 .Header {
   display: flex;
+  align-items: center;
   flex: 0 1 auto;
   border-bottom: 1px solid black;
+  padding: 5px;
 }
 
 .Photo {
-  height: 80px;
-  width: 80px;
-  margin: 10px;
+  height: 70px;
+  width: 70px;
+  margin: 5px;
   border: 2px solid black;
   border-radius: 50px;
+  transform: rotate(3deg);
 }
 
 .Side {
@@ -94,6 +97,7 @@ body {
 }
 
 .SideHeading {
+  font-family: "Roboto Slab";
   font-size: 14px;
   line-height: 18px;
   padding: 2px;
@@ -136,14 +140,14 @@ body {
 }
 
 .TimelineItem {
-  padding: 10px;
+  padding: 8px;
   position: relative;
 }
 
 .TimelineItem:before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 11px;
   left: -6px;
   height: 6px;
   width: 6px;
@@ -162,16 +166,17 @@ body {
 
 .Role {
   font-size: 12px;
-  color: gray;
+  color: #404040;
 }
 
-.Role::before {
+.Role::after {
   content: " ";
   white-space: pre;
 }
 
 .Duration {
   font-size: 12px;
+  color: #404040;
 }
 
 .LogoContainer {
@@ -203,4 +208,29 @@ body {
 
 .Skill .icon {
   font-size: 8px;
+}
+
+.Description {
+  font-size: 11px;
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .Resume, .Resume * {
+    visibility: visible;
+    -webkit-print-color-adjust: exact;
+  }
+  .Resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
 }

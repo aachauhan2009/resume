@@ -21,9 +21,6 @@ const skills = [
     title: "ES6",
     stars: 4,
   }, {
-    title: "GIT",
-    stars: 3
-  }, {
     title: "Jest",
     stars: 3
   }, {
@@ -36,6 +33,31 @@ const skills = [
     title: "Node JS",
     stars: 2
   }
+]
+
+const tools = [
+  {
+    title: "VS Code",
+    stars: 4
+  }, {
+    title: "Sublime Text",
+    stars: 3
+  }, {
+    title: "GIT",
+    stars: 4
+  }, {
+    title: "MS Office",
+    stars: 3
+  }, {
+    title: "Jenkins",
+    stars: 2
+  }, {
+    title: "JIRA",
+    stars: 3
+  }, {
+    title: "Invision",
+    stars: 2
+  },
 ]
 
 function App() {
@@ -82,6 +104,21 @@ function App() {
                     </span>
                   </div>
                 )}
+              </div>
+
+              <div className="TechnicalSkill">
+                <div className="SideHeading flex"> <i className="icon">build</i> <span className="uppercase"> Tools </span> </div>
+
+                {tools.map(({ title, stars }) => 
+                  <div className="Skill" key={title}>
+                    <span> {title} </span>
+                    <span>
+                      {new Array(Math.floor(stars)).fill("").map((_, index) => {
+                        return <i key={index} className="icon">star</i>;
+                      })}
+                    </span>
+                  </div>
+                )}
               </div>             
             </div>
           </div>
@@ -96,23 +133,43 @@ function App() {
               <div className="TimelineItem">
                 <div className="TimelineTitle">
                   <span className="bold"> Flight Network </span>
-                  <span className="Role">Front-end Developer</span>
-                  <div className="Duration">Oct 2017 to Present</div>
+                  <div>
+                    <span className="Role">Front-end Developer</span>
+                    <span className="Duration">(Oct 2017 to Present)</span>
+                  </div>
+                  <ul className="Description">
+                    <li>Developed and maintained main website, Adding new feature to website.</li>
+                    <li>Rebranded complete website from legacy design to modern design along with performance optimization of website.</li>
+                    <li>Developed Mark-up portal UI with complicated logic for adding, upating and deleting rules.</li>
+                  </ul>
                 </div>
               </div>
               <div className="TimelineItem">
                 <div className="TimelineTitle">
                   <span className="bold">Cognizant</span>
-                  <span className="Role">Associate Projects</span>
-                  <div className="Duration">Aug 2016 to Oct 2017</div>
+                  <div>
+                    <span className="Role">Associate Projects</span>
+                    <span className="Duration">(Aug 2016 to Sep 2017)</span>
+                  </div>
+                  <ul className="Description">
+                    <li>Developed new features for banking applications.</li>
+                  </ul>
                 </div>
               </div>
 
               <div className="TimelineItem">
                 <div className="TimelineTitle">
                   <span className="bold">American Megatrends</span>
-                  <span className="Role">System Software Engineer</span>
-                  <div className="Duration">May 2013 to Aug 2016</div>
+                  <div>
+                    <span className="Role">System Software Engineer</span>
+                    <span className="Duration">(May 2013 to Aug 2016)</span>
+                  </div>
+                  <ul className="Description">
+                    <li>Designed and developed responsive website for AMIDuOS software.</li>
+                    <li>Managed and structured database for software license and installation details.</li>
+                    <li>Designed Analytics for software installation, activation and purchase.</li>
+                    <li>Designed and developed web application for creating dynamic template for digital signage software.</li>
+                  </ul>
                 </div>
               </div>
             </div>
