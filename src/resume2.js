@@ -120,7 +120,7 @@ export const resume = {
         "website": "https://blog.amitchauhan.co.in",
         "github": "https://github.com/aachauhan2009/",
         "title": "Frontend Architect",
-        "about": "Passionate developer with 11 years of experience in frontend technologies across various domains. Enjoys writing scalable, high-performance code and helping colleagues."
+        "about": "Dedicated developer with 11 years of experience in frontend technologies across different fields. Skilled in creating scalable, high-performance solutions and solving problems. Enjoys mentoring and helping colleagues."
     },
     "skills": [
         {
