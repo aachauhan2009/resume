@@ -120,7 +120,7 @@ export const resume = {
         "website": "https://blog.amitchauhan.co.in",
         "github": "https://github.com/aachauhan2009/",
         "title": "Frontend Architect",
-        "about": "Dedicated developer with 11 years of experience in frontend technologies across different fields. Skilled in creating scalable, high-performance solutions and solving problems. Enjoys mentoring and helping colleagues."
+        "about": "Dedicated engineer with 11 years of experience in frontend technologies across different fields. Skilled in creating scalable, high-performance solutions and solving problems. Enjoys mentoring and helping colleagues."
     },
     "skills": [
         {
@@ -229,5 +229,15 @@ export const resume = {
             "title": "Figma",
             "stars": 2
         }
+    ],
+    "keySkills": [
+        "Expertise in modern frontend frameworks and libraries (e.g., React, React Native)",
+        "Proficient in HTML5, CSS3, JavaScript, TypeScript, and responsive design principles",
+        "Strong understanding of UI/UX design principles and best practices",
+        "Experienced in performance optimization and scalability techniques",
+        "Skilled in version control systems (e.g., Git) and CI/CD pipelines",
+        "Knowledgeable in backend integration and API consumption",
+        "Excellent communication and leadership abilities",
+        "Passionate about continuous learning and staying up-to-date with industry trends]"
     ]
 }

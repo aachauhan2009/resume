@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa"
 import './App.css';
-import { resume } from './resume2';
+import { resume } from './resume-v3';
 
 const TOTAL_EXPERIENCE = 6.9;
 
@@ -9,27 +9,17 @@ function App() {
   return (
     <div className="ResumeContainer">
       <div className="Resume">
-        <div className="Header">
-          {/* <div>
-            <img className="Photo" src={require('./img/photo.jpg')} alt="Proile" />
-          </div> */}
-          <div className="NameContainer">
-            <div className="Name"> {resume.user.name} </div>
-            <div className="SubTitle"> {resume.user.title} </div>
-            <div className="About">
-              {/* Innovative, dynamic and quick learner Front-end Developer with {TOTAL_EXPERIENCE} years of experience in building
-              scalable, usable and well-constructed websites and applications. */}
-              {resume.user.about}
-            </div>
-          </div>
-        </div>
 
         <div className="ResumeContent">
           <div className="Side">
+          <div className="NameContainer">
+              <div className="Name"> {resume.user.name} </div>
+              <div className="SubTitle"> {resume.user.title} </div>
+          </div>
             <div className="Title">
               <div className="EmailPhone">
                 <div className="flex">
-                  <i className="icon">email</i>
+                  <i className="icon white">email</i>
                   <a className="SimpleLink" href="mailto:a.a.chauhan2009@gmail.com">
                     {resume.user.email}
                   </a>
@@ -47,7 +37,7 @@ function App() {
                   <i className="icon">public</i> <a className="SimpleLink" href={resume.user.website}> {resume.user.website} </a>
                 </div>
                 <div className="flex">
-                  <div className="icon"><FaGithub /></div> <a className="SimpleLink" href={resume.user.github}> {resume.user.github} </a>
+                  <div className="icon"><FaGithub /></div> <a className="SimpleLink" href={resume.user.github}> {resume.user.github.replace("https://github.com/", "")} </a>
                 </div>
               </div>
               <div className="TechnicalSkill">
@@ -93,6 +83,18 @@ function App() {
           </div>
 
           <div className="Main">
+          <div className="Heading flex">
+              <i className="icon icon--24">work</i> <span className="uppercase"> Profile </span>
+            </div>
+          <div className="About">
+              {resume.user.about}
+            </div>
+            <div className="Heading flex">
+              <i className="icon icon--24">work</i> <span className="uppercase"> Key Skills </span>
+            </div>
+            <ul className="KeySkills">
+              {resume.keySkills.map(d => <li><i className="icon">keyboard_double_arrow_right</i>{d}</li>)}
+            </ul>
             <div className="Heading flex">
               <i className="icon icon--24">work</i> <span className="uppercase"> Experience </span>
             </div>

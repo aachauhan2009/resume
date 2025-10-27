@@ -1,25 +1,37 @@
+:root {
+  --primary: #003049;
+  --secondary: #fdf0d5;
+  --font:  "Barlow", sans-serif;
+  ;
+}
 body {
-  font-family: Roboto;
-  line-height: 1.5;
+  font-family: var(--font);
+  line-height: 1.3;
 }
 
 .icon {
   font-family: Material Icons;
   margin-right: 5px;
   font-style: normal;
+  color: black;
 }
 
-.icon--24 {
+/* .icon--24 {
   font-size: 24px;
   height: 30px;
   width: 30px;
   line-height: 30px;
   text-align: center;
   border-radius: 30px;
-  border: 2px solid black;
+  border: 2px solid var(--primary);
   position: absolute;
   background: white;
   left: -8px;
+} */
+
+.Heading .icon {
+  color: white;
+  display: none;
 }
 
 .ResumeContainer {
@@ -45,7 +57,6 @@ body {
   display: flex;
   align-items: center;
   flex: 0 1 auto;
-  border-bottom: 1px solid black;
   padding: 5px;
 }
 
@@ -61,7 +72,12 @@ body {
 .Side {
   flex: 0 0 30%;
   padding: 0 10px;
-  background: #E4E4E4;
+  color: white;
+  background: var(--primary);
+}
+
+.Side .icon {
+  color: white;
 }
 
 .flex {
@@ -86,24 +102,27 @@ body {
 }
 
 .Name {
-  font-family: "Roboto Slab";
-  font-size: 25px;
+  font-family: var(--font);
+  font-size: 30px;
   font-weight: bold;
-  padding: 0 8px;
+  padding: 10px 0px 5px 0;
+  text-transform: uppercase;
 }
 
 .SubTitle {
-  font-size: 16px;
-  padding: 0 10px;
+  font-size: 14px;
+  padding: 0;
 }
 
 .SideHeading {
-  font-family: "Roboto Slab";
+  font-family: var(--font);
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  padding: 2px;
-  border-bottom: 1px solid black;
+  padding: 2px 15px;
+  background: rgba(0,0,0,0.3);
+  margin-right: -15px;
+  margin-left: -15px;
   margin-bottom: 10px;
 }
 
@@ -114,7 +133,7 @@ body {
 .About {
   font-weight: normal;
   font-size: 10px;
-  padding: 0 10px;
+  padding: 5px 0;
 }
 
 .Main {
@@ -122,15 +141,14 @@ body {
 }
 
 .Heading {
-  font-family: "Roboto Slab";
+  font-family: var(--font);
   font-size: 14px;
   font-weight: bold;
   line-height: 16px;
-  color: black;
+  color: var(--primary);
+  text-decoration: underline;
   padding: 3px 0;
-  background: #E4E4E4;
-  padding-left: 30px;
-  margin-left: 10px;
+  /* background: var(--primary); */
   position: relative;
   border-radius: 10px;
 }
@@ -207,9 +225,9 @@ body {
   padding: 2px 5px;
   margin: 2px;
   display: inline-block;
-  background: #404040;
+  background: var(--secondary);
   border-radius: 4px;
-  color: white;
+  color: var(--primary);
 }
 
 .Skill *:first-child {
@@ -227,12 +245,12 @@ body {
 }
 
 .SimpleLink {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
-.Experience, .Achievements {
-  padding: 10px;
+.Experience, .Achievements, .KeySkills {
+  padding: 5px 0;
   font-size: 10px;
 }
 
@@ -244,8 +262,12 @@ body {
 }
 
 .ExperienceDuration, .CourseDuration {
-  color: #404040;
+  color: black;
   font-size: 9px;
+}
+
+.CourseDuration {
+  color: white;
 }
 
 .ExperienceDuration::before {
@@ -261,6 +283,9 @@ ul {
 li {
   list-style: none;
 }
+
+
+ 
 
 @media print {
   body * {
